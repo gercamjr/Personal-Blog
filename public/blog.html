@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>One Star Thoughts</title>
+    <meta name="description" content="A blog containing thoughts and life ramblings of One Star">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <div class="logo">
+            <img src="img/one-star-logo-1.svg" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="/about" class="nav__link">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner"></div>
+
+    <div class="blog__published">
+        <h1 class="blog__published--title"></h1>
+        <p class="blog__published--date"><span>published at - </span></p>
+        <a href="" class="blog__published--btn btn grey" id="edit-blog-btn">edit blog</a>
+        <div class="blog__published--article">
+        </div>
+    </div>
+
+    <h1 class="sub-heading">Read more</h1>
+
+    <section class="section__posts">
+
+        <!-- 
+            <div class="section__posts--card">
+                <img src="img/header.png" class="blog-image" alt="">
+                <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+                <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.</p>
+                <a href="/" class="btn dark">read</a>
+            </div>
+            -->
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/nav.js"></script>
+
+
+</body>
+
+
+
+</html>
