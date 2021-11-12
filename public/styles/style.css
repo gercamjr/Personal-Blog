@@ -3,8 +3,8 @@
 /* Custom properties */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Josefin Sans', sans-serif;
+    --ff-secondary: 'Varela', sans-serif;
     --fw-reg: 300;
     --fw-bold: 900;
     --clr-light: #fff;
@@ -112,6 +112,9 @@ h3 {
 
 p {
     font-family: var(--ff-secondary);
+    line-height: 1.5;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-body);
 }
 
 .sandbox-clean-and-grimey {
@@ -429,9 +432,11 @@ header {
 /* banner section */
 
 .banner {
-    width: 100%;
+    width: 70vw;
     height: 400px;
     position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
     background: #e7e7e7;
     background-size: cover;
     background-position: center;
@@ -544,13 +549,16 @@ textarea::-webkit-scrollbar-thumb {
     color: #2d2d2d;
     resize: none;
     border: none;
-    padding: 10px;
+    padding: 10px 3em;
     border-radius: 10px;
 }
 
+.blog__published--title {
+    padding: 10px 1.5em;
+}
+
 .blog__published--date {
-    margin: 20px 0 60px;
-    padding: 0 10px;
+    padding: 0 3em;
     text-transform: capitalize;
     font-style: italic;
     color: rgba(0, 0, 0, 0.5);
@@ -580,6 +588,10 @@ textarea::-webkit-scrollbar-thumb {
     font-weight: 500;
     font-size: 40px;
     margin-top: 80px;
+}
+
+#edit-blog-btn {
+    margin: 0 3.75em;
 }
 
 
