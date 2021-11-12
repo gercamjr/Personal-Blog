@@ -1,11 +1,10 @@
-let firebaseConfig = {
-    apiKey: "AIzaSyDktfNez5j4Q0NzdoSXI85XU_l6fisdxJI",
-    authDomain: "one-star-thoughts.firebaseapp.com",
-    projectId: "one-star-thoughts",
-    storageBucket: "one-star-thoughts.appspot.com",
-    messagingSenderId: "695195344947",
-    appId: "1:695195344947:web:a5c32a8624840e5b010346",
-    measurementId: "G-WKHMKTH7YF"
+const firebaseConfig = {
+    apiKey: "AIzaSyCWwz68EH9WWcz9t8_hoLPqkkHjwCA3LE8",
+    authDomain: "no-hay-pedo-blog.firebaseapp.com",
+    projectId: "no-hay-pedo-blog",
+    storageBucket: "no-hay-pedo-blog.appspot.com",
+    messagingSenderId: "578813113349",
+    appId: "1:578813113349:web:b750fa1496a9230085186c"
 };
 
 firebase.initializeApp(firebaseConfig);

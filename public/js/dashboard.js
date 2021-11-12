@@ -45,13 +45,17 @@ const getUserWrittenBlogs = () => {
 const createBlog = (blog) => {
     let data = blog.data();
     blogSection.innerHTML += `
-    <div class="section__posts-card">
-        <img src="${data.bannerImage}" class="blog-image" alt="">
-        <h1 class="blog-title">${data.title.substring(0, 100) + '...'}</h1>
-        <p class="blog-overview">${data.article.substring(0, 200) + '...'}</p>
-        <a href="/${blog.id}" class="section__posts--card--button btn dark">read</a>
-        <a href="/${blog.id}/editor" class="section__posts--card--button btn grey">edit</a>
-        <a href="#" onclick="deleteBlog('${blog.id}')" class="section__posts--card--button btn danger">delete</a>
+    <div class="blog-card">
+        <img src="${data.bannerImage}" class="blog-image" alt="" />
+        <div class="card__content">
+            <time class="card__date">${data.publishedAt}</time>
+            <span class="card__title">${data.title}<span>
+            <div class=="card__buttons">
+                <a href="/${blog.id}" class="section__posts--card--button btn dark">read</a>
+                <a href="/${blog.id}/editor" class="section__posts--card--button btn grey">edit</a>
+                <a href="#" onclick="deleteBlog('${blog.id}')" class="section__posts--card--button btn danger">delete</a>
+            </div>
+        </div>
     </div>
     `;
 }

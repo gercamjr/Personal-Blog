@@ -79,7 +79,7 @@ publishBtn.addEventListener('click', () => {
                 article: articleField.value,
                 bannerImage: bannerPath,
                 publishedAt: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`,
-                author: 'One Star'
+                author: 'Gera'
             })
             .then(() => {
                 location.href = `/${docName}`;
