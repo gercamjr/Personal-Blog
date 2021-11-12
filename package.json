@@ -4,7 +4,6 @@
     "description": "A full stack blog app for One Star Thoughts",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
