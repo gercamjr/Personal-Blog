@@ -50,14 +50,13 @@ const createBlog = (blog) => {
         <div class="card__content">
             <time class="card__date">${data.publishedAt}</time>
             <span class="card__title">${data.title}<span>
-            <div class=="card__buttons">
+            
                 <a href="/${blog.id}" class="section__posts--card--button btn dark">read</a>
                 <a href="/${blog.id}/editor" class="section__posts--card--button btn grey">edit</a>
                 <a href="#" onclick="deleteBlog('${blog.id}')" class="section__posts--card--button btn danger">delete</a>
-            </div>
+            
         </div>
-    </div>
-    `;
+    </div>`;
 }
 
 const deleteBlog = (id) => {

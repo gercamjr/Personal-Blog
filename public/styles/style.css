@@ -187,6 +187,10 @@ h3 {
     font-size: var(--fs-h3);
 }
 
+label {
+    font-family: var(--ff-primary);
+}
+
 
 /* header */
 
@@ -318,7 +322,7 @@ header {
 
 .blog-card {
     background-color: var(--clr-light);
-    max-width: 960px;
+    width: 700px;
     border-radius: var(--border-radius-primary);
     box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
     padding: 20px 20px 28px 20px;
@@ -357,14 +361,14 @@ header {
 
 @media (min-width: 576px) {
     .card__content {
-        width: 55%;
+        width: 100%;
         padding-left: 40px;
     }
 }
 
 .card__date {
     display: block;
-    font-family: var(--font-family-secondary);
+    font-family: var(--ff-secondary);
     font-size: var(--font-size-caption);
     line-height: var(--line-height-caption);
     text-transform: uppercase;
@@ -379,7 +383,7 @@ header {
 }
 
 .card__title {
-    font-family: var(--font-family-primary);
+    font-family: var(--ff-primary);
     font-size: var(--font-size-title);
     line-height: var(--line-height-title);
     color: var(--color-text);
@@ -432,10 +436,11 @@ header {
 /* banner section */
 
 .banner {
+    min-width: 400px;
     width: 70vw;
     height: 400px;
     position: relative;
-    margin: 0 auto;
+    margin: 1em auto;
     border-radius: 10px;
     background: #e7e7e7;
     background-size: cover;
@@ -616,19 +621,19 @@ textarea::-webkit-scrollbar-thumb {
 
 /* dashboard section */
 
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dashboard__title {
     text-align: center;
-    position: relative;
     margin: 100px 0 20px;
+    font-size: var(--fs-h1);
 }
 
-.dashboard__btn {
-    display: block;
-    width: 11em;
-    margin: 0 auto;
-}
-
-.card__buttons {
+.dashboard__ .card__buttons {
     display: flex;
     flex-direction: row;
 }
