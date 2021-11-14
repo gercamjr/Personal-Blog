@@ -23,7 +23,6 @@
     "homepage": "https://github.com/gercamjr/One-Star-Thoughts#readme",
     "dependencies": {
         "express-fileupload": "^1.2.1",
-        "express.js": "^1.0.0",
-        "nodemon": "^2.0.14"
+        "express.js": "^1.0.0"
     }
 }
