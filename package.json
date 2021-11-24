@@ -1,14 +1,14 @@
 {
-    "name": "one-star-thoughts-blog",
+    "name": "no-hay-pedo-blog",
     "version": "1.0.0",
-    "description": "A full stack blog app for One Star Thoughts",
+    "description": "A full stack blog app for myself",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gercamjr/One-Star-Thoughts.git"
+        "url": "git+https://github.com/gercamjr/Personal-Blog.git"
     },
     "keywords": [
         "blog",
@@ -18,9 +18,9 @@
     "author": "Gerardo Camorlinga Jr.",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/gercamjr/One-Star-Thoughts/issues"
+        "url": "https://github.com/gercamjr/Personal-Blog/issues"
     },
-    "homepage": "https://github.com/gercamjr/One-Star-Thoughts#readme",
+    "homepage": "https://github.com/gercamjr/Personal-Blog#readme",
     "dependencies": {
         "express-fileupload": "^1.2.1",
         "express.js": "^1.0.0"
