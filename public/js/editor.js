@@ -1,5 +1,6 @@
 const blogTitleField = document.querySelector('.blog__editor--title');
 const articleField = document.querySelector('.blog__editor--article');
+const slug = document.getElementById('slug');
 
 // banner
 const bannerImage = document.querySelector('#banner-upload');
@@ -54,14 +55,16 @@ publishBtn.addEventListener('click', () => {
     if (articleField.value.length && blogTitleField.value.length) {
 
         let docName;
+        let id = '';
         if (blogID[0] == 'editor') {
             let letters = 'abcdefghijklmnopqrstuvwxyz';
-            let blogTitle = blogTitleField.value.split(" ").join("-");
-            let id = '';
+            // let blogTitle = blogTitleField.value.split(" ").join("-");
+
             for (let i = 0; i < 4; i++) {
                 id += letters[Math.floor(Math.random() * letters.length)];
             }
-            let docName = `${blogTitle}-${id}`;
+            // docName = `${blogTitle}-${id}`;
+            docName = slugify(document.getElementById('slug').value);
 
         } else {
             docName = decodeURI(blogID[0]);
@@ -69,12 +72,13 @@ publishBtn.addEventListener('click', () => {
         // generating id
 
 
-        // setting up docName
+        // setting up slug
 
         let date = new Date(); // for published at info
 
         //access firstore with db variable;
         db.collection("blogs").doc(docName).set({
+                id: `${id}`,
                 title: blogTitleField.value,
                 article: articleField.value,
                 bannerImage: bannerPath,
@@ -114,4 +118,11 @@ if (blogID[0] != "editor") {
             location.replace("/");
         }
     })
+}
+
+function slugify(text) {
+    return text.toString().toLowerCase().trim()
+        .replace(/&/g, '-and-')
+        .replace(/[\s\W-]+/g, '-')
+        .replace(/[^a-zA-Z0-9-_]+/g, '');
 }

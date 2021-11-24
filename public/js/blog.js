@@ -1,6 +1,6 @@
-let blogId = decodeURI(location.pathname.split("/").pop());
+let slug = decodeURI(location.pathname.split("/").pop());
 
-let docRef = db.collection("blogs").doc(blogId);
+let docRef = db.collection("blogs").doc(slug);
 
 docRef.get().then((doc) => {
     if (doc.exists) {
@@ -26,7 +26,7 @@ const setupBlog = (data) => {
         if (user) {
             let editBtn = document.getElementById('edit-blog-btn');
             editBtn.style.display = "inline";
-            editBtn.href = `${blogId}/editor`;
+            editBtn.href = `${slug}/editor`;
 
         } else {
 
@@ -73,4 +73,30 @@ const addArticle = (ele, data) => {
             ele.innerHTML += `<p>${item}</p>`;
         }
     })
+}
+
+docRef.on("child_added", function(snapshot) {
+    var newPost = snapshot.val();
+    $(".comments__published").prepend('<div class="comment">' +
+        '<h4>' + escapeHtml(newPost.name) + '</h4>' +
+        '<div class="profile-image"><img src="http://www.gravatar.com/avatar/' + escapeHtml(newPost.md5Email) + '?s=100&d=retro"/></div> ' +
+        '' + moment(newPost.postedAt).fromNow() + '<p>' + escapeHtml(newPost.message) + '</p></div>');
+});
+
+document.getElementbyId("comment").submit(function() {
+    docRef.push().set({
+        name: $("#comment__name").val(),
+        message: $("#comment__message").val(),
+        md5Email: md5($("#comment__email").val()),
+        postedAt: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    $("input[type=text], textarea").val("");
+    return false;
+});
+
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
 }

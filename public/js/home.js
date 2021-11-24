@@ -1,6 +1,6 @@
 const blogSection = document.querySelector('.section__posts');
 
-db.collection("blogs").get().then((blogs) => {
+db.collection("blogs").orderBy("publishedAt", "desc").get().then((blogs) => {
     blogs.forEach(blog => {
         if (blog.id != decodeURI(location.pathname.split("/").pop())) {
             createBlog(blog);
