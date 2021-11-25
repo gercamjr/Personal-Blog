@@ -22,11 +22,7 @@
     },
     "homepage": "https://github.com/gercamjr/Personal-Blog#readme",
     "dependencies": {
-        "dotenv": "^10.0.0",
         "express-fileupload": "^1.2.1",
         "express.js": "^1.0.0"
-    },
-    "devDependencies": {
-        "nodemon": "^1.18.10"
     }
 }

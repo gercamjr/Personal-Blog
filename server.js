@@ -1,14 +1,14 @@
-import express, { static } from 'express';
-import { join } from 'path';
-import fileupload from 'express-fileupload';
+const express = require('express');
+const path = require('path');
+const fileupload = require('express-fileupload');
 
-let initial_path = join(__dirname, "public");
+let initial_path = path.join(__dirname, "public");
 const app = express();
-app.use(static(initial_path));
+app.use(express.static(initial_path));
 app.use(fileupload());
 
 app.get('/', (req, res) => {
-    res.sendFile(join(initial_path, "index.html"));
+    res.sendFile(path.join(initial_path, "index.html"));
 })
 
 app.listen("3000", () => {
@@ -16,7 +16,7 @@ app.listen("3000", () => {
 })
 
 app.get('/editor', (req, res) => {
-    res.sendFile(join(initial_path, 'editor.html'));
+    res.sendFile(path.join(initial_path, 'editor.html'));
 })
 
 app.post('/upload', (req, res) => {
@@ -42,15 +42,15 @@ app.post('/upload', (req, res) => {
 
 
 app.get("/admin", (req, res) => {
-    res.sendFile(join(initial_path, "dashboard.html"));
+    res.sendFile(path.join(initial_path, "dashboard.html"));
 })
 
 app.get("/:blog", (req, res) => {
-    res.sendFile(join(initial_path, "blog.html"));
+    res.sendFile(path.join(initial_path, "blog.html"));
 })
 
 app.get("/:blog/editor", (req, res) => {
-    res.sendFile(join(initial_path, 'editor.html'));
+    res.sendFile(path.join(initial_path, 'editor.html'));
 })
 
 app.use((req, res) => {
