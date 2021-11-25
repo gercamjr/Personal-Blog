@@ -650,3 +650,25 @@ textarea::-webkit-scrollbar-thumb {
 #edit-blog-btn {
     display: none;
 }
+
+
+/* about me page */
+
+.about__me {
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px 0;
+    border-radius: 10px;
+    background-color: var(--clr-light);
+}
+
+.about__me--img {
+    width: 50%;
+}
+
+.about__me--content {
+    display: flex;
+}
