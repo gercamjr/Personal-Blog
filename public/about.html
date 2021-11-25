@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>No Hay Pedo</title>
+    <meta name="description" content="A blog containing thoughts and life ramblings of a California Texas Mexican">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Ubuntu:wght@300;400;500;700&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="/about" class="nav__link">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sandbox sandbox-clean-and-grimey">
+        <h1 class="heading heading-clean-and-grimey">
+            No
+            <span class="ampersand">Hay</span>
+            <span class="script">Pedo</span>
+        </h1>
+    </div>
+    <section class="about__me">
+        <h2 class="about__me--title">About Me</h2>
+        <div class="about__me--content ">
+            <img src="img/about_me.jpg" class="about__me--img" alt="Gera staring into the sunset" />
+            <p>Cali born. Texas raised. Mexican heart.<br/> Amateur photographer. Web Developer.<br/> Catholic Missionary from 2010-2020. <br/>Catholic Priest from March 6, 2020 to December 24,2020. <br /> On December 23rd, 2020 I suffered a mental, emotional
+                and spiritual meltdown/crisis that threw me into a severe depression. I decided to start this blog as a form of therapy and to share my personal experience. I hope my story helps others have compassion towards their loved ones who may
+                be going through a similar experience. And for those in the battle for their mental health: You are not alone. You deserve to be loved and helped.
+            </p>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+
+    <script src="js/firebase.js"></script>
+
+    <script src="js/nav.js "></script>
+    <script>
+        var h1 = document.querySelector("h1 ");
+
+        h1.addEventListener("input ", function() {
+            this.setAttribute("data-heading ", this.innerText);
+        });
+    </script>
+
+</body>
+
+
+
+</html>
