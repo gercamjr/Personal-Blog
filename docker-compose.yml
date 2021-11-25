@@ -1,0 +1,23 @@
+version: '3'
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: DOCKERFILE
+    image: nodejs
+    container_name: nodejs
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    networks:
+      - app-network
+    command: npm start
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  node_modules:
