@@ -86,9 +86,11 @@ strong {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
+	border: none;
     color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer;
+	font-family: var(--ff-primary);
     font-size: .8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -126,7 +128,13 @@ p {
 
 #logo {
 	display: inline-block;
-	max-width: 20em;
+	max-width: 30em;
+}
+
+@media (max-width: 600px) {
+	#logo {
+		max-width: 20em;
+	}
 }
 
 #logo.logo-banner {
@@ -519,7 +527,7 @@ textarea::-webkit-scrollbar-thumb {
     max-width: 60rem;
     display: block;
     margin: auto;
-    padding: 50px 40px;
+    padding: 50px 0;
     border-radius: 10px;
     background-color: var(--clr-light);
 }
@@ -609,10 +617,11 @@ div.comments h3 {
 	font-family: var(--ff-secondary);
 }
 
-#comment .comment-input, #comment__submit {
+#comment .comment-input {
 	background-color: #e7e7e7;
 	border: none;
 	border-radius: 10px;
+	margin-bottom: 20px;
 	padding: 20px;
 }
 
@@ -630,27 +639,12 @@ div.comments h3 {
 }
 
 #comment__submit {
-	background-color: var(--clr-accent);
-	color: rgba(0.3, 0.3, 0.3, 0.6);
-	cursor: pointer;
-	float: right;
-	font-family: var(--ff-secondary);
-	font-weight: bold;
-}
-
-#comment__submit:hover {
-	background-color: var(--clr-accent-hover);
+	display: block;
 }
 
 @media (max-width: 940px) {
 	#comment input {
 		display: block;
-	}
-	#comment .comment-input {
-		margin-bottom: 20px;
-	}
-	#comment__submit {
-		float: inherit;
 	}
 }
 
