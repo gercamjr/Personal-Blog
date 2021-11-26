@@ -11,6 +11,7 @@
     --clr-dark: #303030;
     --clr-grey: lightgrey;
     --clr-accent: #16e0bd;
+	--clr-accent-hover : #13c8aa;
     --clr-danger: tomato;
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -518,7 +519,7 @@ textarea::-webkit-scrollbar-thumb {
     max-width: 60rem;
     display: block;
     margin: auto;
-    padding: 50px 0;
+    padding: 50px 40px;
     border-radius: 10px;
     background-color: var(--clr-light);
 }
@@ -618,6 +619,7 @@ div.comments h3 {
 #comment__message {
 	display: block;
 	margin-bottom: 20px;
+	resize: vertical;
 	width: calc(100% - 40px);
 }
 
@@ -630,9 +632,14 @@ div.comments h3 {
 #comment__submit {
 	background-color: var(--clr-accent);
 	color: rgba(0.3, 0.3, 0.3, 0.6);
+	cursor: pointer;
 	float: right;
 	font-family: var(--ff-secondary);
 	font-weight: bold;
+}
+
+#comment__submit:hover {
+	background-color: var(--clr-accent-hover);
 }
 
 @media (max-width: 940px) {
@@ -698,14 +705,19 @@ div.comments h3 {
     max-width: 60rem;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    padding: 50px 0;
+    margin: 20px auto 0;
+    padding: 50px 40px;
     border-radius: 10px;
     background-color: var(--clr-light);
 }
 
+.about__me--title {
+	margin-bottom: 20px;
+}
+
 .about__me--img {
     width: 50%;
+	margin-right: 20px;
 }
 
 .about__me--content {
