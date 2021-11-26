@@ -11,13 +11,14 @@ db.collection("blogs").orderBy("publishedAt", "desc").get().then((blogs) => {
 const createBlog = (blog) => {
     let data = blog.data();
     blogSection.innerHTML += `
+    <a href="/${blog.id}" >
     <div class="blog-card">
   <img src="${data.bannerImage}" class="blog-image" alt="" />
   <div class="card__content">
     <time class="card__date">${data.publishedAt}</time>
     <span class="card__title">${data.title}<span>
-    <a href="/${blog.id}" class="section__posts--card--button btn dark">read</a>
+    
   </div>
-</div>
+</div></a>
     `;
 }
