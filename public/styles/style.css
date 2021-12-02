@@ -133,10 +133,31 @@ p {
 #logo {
 	display: inline-block;
 	max-width: 30em;
+	position: relative;
 }
 
 #logo img {
+	filter: drop-shadow(8px 8px rgba(0, 0, 0, 0.3));
+	position: relative;
+	transition: all 250ms ease-in-out;
 	width: 100%;
+}
+
+#logo:hover img, #logo:active img {
+	filter: drop-shadow(6px 6px rgba(0, 0, 0, 0.3));
+	transform: translate(2px, 2px);
+}
+
+#logo img.pedo {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#logo:hover img.pedo, #logo:active img.pedo {
+	filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.3));
+	transform: translate(4px, 4px);
 }
 
 @media (max-width: 600px) {
@@ -148,6 +169,15 @@ p {
 #logo.logo-banner {
 	max-width: 16em;
 	margin: -2em 0;
+}
+
+#logo.logo-banner img {
+	filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.3));
+}
+
+#logo.logo-banner:hover img, #logo.logo-banner:active img {
+	filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
+	transform: translate(2px, 2px);
 }
 
 h2 {
