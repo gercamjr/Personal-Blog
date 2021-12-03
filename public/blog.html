@@ -38,11 +38,7 @@
         </nav>
     </header>
     <div class="sandbox sandbox-clean-and-grimey">
-        <h1 class="heading heading-clean-and-grimey">
-            No
-            <span class="ampersand">Hay</span>
-            <span class="script">Pedo</span>
-        </h1>
+        <a id="logo" class="logo-banner" href="/" alt="home"><img src="img/no-hay-pedo-LOGO-BANNER.svg" alt=""></a>
     </div>
     <div class="banner"></div>
 
@@ -58,18 +54,16 @@
 
         <form id="comment">
             <label for="comment__message">Message</label>
-            <textarea id="comment__message"></textarea>
+            <textarea id="comment__message" class="comment-input" placeholder="Message*"></textarea>
 
             <label for="comment__name">Name</label>
-            <input type="text" id="comment__name">
+            <input type="text" id="comment__name" class="comment-input" placeholder="Name*">
 
             <label for="comment__email">Email</label>
-            <input type="text" id="comment__email">
+            <input type="text" id="comment__email" class="comment-input" placeholder="Email*">
 
-            <input type="submit" value="Post Comment">
+            <input id="comment__submit" class="btn dark" type="submit" value="Post Comment">
         </form>
-
-        <hr>
 
         <div class="comments__published"></div>
     </div>
