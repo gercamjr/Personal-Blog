@@ -7,6 +7,7 @@
     --ff-secondary: 'Varela', sans-serif;
     --fw-reg: 300;
     --fw-bold: 900;
+    --clr-background: #f06669;
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-grey: lightgrey;
@@ -47,7 +48,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background: #f06669;
+    background: var(--clr-background);
     box-sizing: border-box;
 }
 
